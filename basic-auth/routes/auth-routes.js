@@ -77,7 +77,7 @@ authRoutes.post("/login", (req, res, next) => {
       // Save the login in the session!
       req.session.currentUser = user;
       //res.json(user);
-      res.render("secret", { user });
+      res.render("index", { user });
     } else {
       res.render("auth/login", {
         errorMessage: "Incorrect password"
